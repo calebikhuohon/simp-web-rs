@@ -36,7 +36,7 @@ async fn get_index() -> HttpResponse {
 async fn post_gcd(form: web::Form<GcdParameters>) -> HttpResponse {
     if form.n == 0 || form.m == 0 {
         return HttpResponse::BadRequest().content_type("text/html").
-            body("computing the gcd with zero is wack. fuck you");
+            body("computing the gcd with zero is boring");
     }
 
     let response = format!("the greatest common divisor of the numbers {} and {} \
